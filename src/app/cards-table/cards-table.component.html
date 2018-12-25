@@ -1,0 +1,49 @@
+
+<button [disabled]="!addNewCard" class="btn btn-primary">Add new card after 5 seconds</button>
+<hr>
+<button disabled='{{ !addNewCard }}' class="btn btn-primary">Always disabled</button>
+<hr>
+<button class="btn btn-success" (click)="addCard()">Add new card (click test)</button>
+<p>{{ addCardStatus }}</p>
+<hr>
+
+<input type="text" class="form-control" (input)="onKeyUp($event)" placeholder="(input)='onKeyUp($event)'">  
+<p>{{ inputText }}</p>
+<hr>
+
+<input type="text" class="form-control" #myInput (input)="onTyping(myInput.value)" placeholder="#myInput (input)='onTyping(myInput.value)'">  
+<p>{{ inputText2 }}</p>
+<hr>
+
+<input type="text" class="form-control" (keyup)="onEnterText($event)" placeholder="click on 'Enter">  
+<p>{{ inputText3 }}</p>
+<hr>
+
+<input type="text" class="form-control" (keyup.enter)="onEnterText4($event)" placeholder="(keyup.enter) click on Enter MORE SIMPLE">  
+<p>{{ inputText4 }}</p>
+<hr>
+
+<h4>Two way binding</h4>
+<input type="text" class="form-control" [(ngModel)]="twoWayBinding">
+<p>{{ twoWayBinding }}</p>
+<hr>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+    </div>
+    <div class="col">
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+    </div>
+    <div class="col">
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+    </div>
+  </div>
+</div>
