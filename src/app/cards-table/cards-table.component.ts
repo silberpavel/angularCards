@@ -9,7 +9,9 @@ export class CardsTableComponent implements OnInit {
 
   CurrentDate: number = Date.now();
   compareHour = 6;
-  morningTime = CurrentDate | date:'H' > 6;
+  // morningTime = CurrentDate | date:'H' > 6;
+
+  currentHour = CurrentDate.
 
   addNewCard = false;
   addCardStatus = '';
