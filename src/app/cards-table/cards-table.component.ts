@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsTableComponent implements OnInit {
 
+  CurrentDate: number = Date.now();
+  compareHour = 6;
+  morningTime = CurrentDate | date:'H' > 6;
 
   addNewCard = false;
   addCardStatus = '';

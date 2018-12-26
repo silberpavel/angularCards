@@ -1,4 +1,6 @@
-
+<div *ngIf="(CurrentDate | date:'H') > 6">Good evening or good night! The time is <b>{{ CurrentDate | date}}</b></div>
+<div *ngIf="(CurrentDate | date:'H') < 6">Good morning! The time is <b>{{ CurrentDate | date}}</b></div>
+<!-- <div *ngIf="(CurrentDate | date:'H') > 8">Time test <b>{{ CurrentDate | date:'H'}}</b></div> -->
 <button [disabled]="!addNewCard" class="btn btn-primary">Add new card after 5 seconds</button>
 <hr>
 <button disabled='{{ !addNewCard }}' class="btn btn-primary">Always disabled</button>
