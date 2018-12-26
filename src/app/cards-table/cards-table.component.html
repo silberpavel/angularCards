@@ -1,6 +1,38 @@
-<div *ngIf="(CurrentDate | date:'H') > 6">Good evening or good night! The time is <b>{{ CurrentDate | date}}</b></div>
-<div *ngIf="(CurrentDate | date:'H') < 6">Good morning! The time is <b>{{ CurrentDate | date}}</b></div>
-<!-- <div *ngIf="(CurrentDate | date:'H') > 8">Time test <b>{{ CurrentDate | date:'H'}}</b></div> -->
+<div class="dayTime" style="border: 1px solid grey; width: 50%;">
+  <div style="text-align: center;">
+    <h4>*ngIf else test</h4>
+    <button (click)="ngIfTest()" class="btn btn-primary">ngIf test</button>
+    <p *ngIf="ngIfElse; else successElse">True</p>
+    <ng-template #successElse>
+      <p>False</p>
+    </ng-template>
+    <hr>
+    <p>what Is Outside Now?</p>
+    <b><p>It's {{ whatIsOutsideNow() }}</p></b>
+    <div>{{ CurrentDate | date: 'hh:mm:ss' }}</div>
+  </div>
+</div>
+<hr>
+<div class="dayTime" style="border: 1px solid grey; width: 50%;">
+    <div style="text-align: center;">
+      <h4>*ngFor test</h4>
+
+      <!-- <button (click)="ngIfTest()" class="btn btn-primary">ngIf test</button> -->
+      <!-- <p *ngIf="ngIfElse; else successElse">True</p> -->
+      <app-card *ngFor="let card of arrayOfCards"></app-card>
+
+      <hr>
+      <h4>All cards in array now:</h4>
+      <ul>
+        <li></li>
+      </ul>
+
+
+    </div>
+  </div>
+  <hr>
+
+
 <button [disabled]="!addNewCard" class="btn btn-primary">Add new card after 5 seconds</button>
 <hr>
 <button disabled='{{ !addNewCard }}' class="btn btn-primary">Always disabled</button>
