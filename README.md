@@ -1,32 +1,3 @@
-# SilberAngular
-(npm i @angular/cli)
-(npm i -g @angular -S)
-## Create new project (with CLI) 
-```
-ng new projectName
-```
-
-## 	Создание компонента
-```
-ng g c my-component --spec="false" (without unit test)
-```
-
-## Selectors in components
-1. tag
-2. attribute
-3. class
-
-## Bootsrtap
-```
-npm i bootstrap --save
-```
-
-* Подключаем Bootstrap
-* .agular-cli.json OR angular.json*
-```ts
-    "styles": [
-        "node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "src/styles.css"
-    ],
-```
+# Trello ver. 1
+![Version 1](https://serving.photos.photobox.com/018373659fe914cfd0d33f4fae886e011915c0c6890c4e2e50e16f5a26d0ea7a1bfc2d1f.jpg)
 
