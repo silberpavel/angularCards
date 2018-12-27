@@ -7,9 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrelloComponent implements OnInit {
 
-  trelloName: string = '';
-  trelloQuan: number;
-  
   trelloCardsArray = [{
     name: 'Капуста',
     quan: 2
@@ -24,16 +21,11 @@ export class TrelloComponent implements OnInit {
     quan: 12
   }];
 
-  addNewTcard() {
-    this.trelloCardsArray.push({
-      name: this.trelloName,
-      quan: this.trelloQuan
-    });
-    this.trelloName = '';
-    this.trelloQuan;
-  }
-
   constructor() { }
+
+  updateTcardList(card: {name: string, quan: number}) {
+    this.trelloCardsArray.push(card)
+  }
 
   ngOnInit() {
   }

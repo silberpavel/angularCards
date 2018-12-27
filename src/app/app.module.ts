@@ -9,6 +9,7 @@ import { CardComponent } from './cards-table/card/card.component';
 import { PlayCardComponent } from './play-card/play-card.component';
 import { TrelloComponent } from './trello/trello.component';
 import { TcardComponent } from './trello/tcard/tcard.component';
+import { AddTcardComponent } from './add-tcard/add-tcard.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TcardComponent } from './trello/tcard/tcard.component';
     CardComponent,
     PlayCardComponent,
     TrelloComponent,
-    TcardComponent
+    TcardComponent,
+    AddTcardComponent
   ],
   imports: [
     BrowserModule,
