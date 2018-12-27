@@ -1,0 +1,19 @@
+#card {
+    border: 1px solid white;
+    width: 100px;
+    height: 280px;
+    display: inline-block;
+    margin: 5px;
+    background-color: cadetblue;
+}
+#card-id {
+    width: 100px;
+}
+
+#card-img {
+    width: 100px;
+}
+
+.big-text {
+    color: green;
+}
