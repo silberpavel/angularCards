@@ -15,5 +15,6 @@
 }
 
 .big-text {
-    color: green;
+    color: magenta;
+    font-size: 180%;
 }

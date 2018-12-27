@@ -21,23 +21,23 @@ export class CardsTableComponent implements OnInit {
 
   simpleArray = ['Audi', 'BMW', 'Opel'];
 
-  setTextBigLenght(item: string) {
-    return item.length > 4 ? true : false;
+  setTextBigLenght(item: any) {
+    return item.id.length <= 4 ? true : false;
   }
 
   whatIsOutsideNow() {
     switch (true) {
       case (this.CurrentHour >= 6 && this.CurrentHour <= 11):
-        console.log("Morning now");
+        return("Morning now");
         break;
       case (this.CurrentHour >= 12 && this.CurrentHour <= 17):
         return("Midday now");
         break;
         case (this.CurrentHour >= 17 && this.CurrentHour <= 22):
-        console.log("Evening now");
+        return("Evening now");
         break;
       default:
-        console.log("Night now");
+        return("Night now");
     }
   }
 

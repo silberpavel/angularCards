@@ -1,0 +1,6 @@
+<input type="text" class="form-control" [(ngModel)]="trelloName" placeholder="Название продукта">  
+<input type="text" class="form-control" [(ngModel)]="trelloQuan" placeholder="Количество">  
+<button class="btn btn-success" (click)="addNewTcard()">Добавить в список</button>
+<hr>
+<app-tcard *ngFor="let tcard of trelloCardsArray" [tcardItem]="tcard">Trello card...</app-tcard>
+

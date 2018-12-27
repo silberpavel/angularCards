@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { CardsTableComponent } from './cards-table/cards-table.component';
 import { CardComponent } from './cards-table/card/card.component';
 import { PlayCardComponent } from './play-card/play-card.component';
+import { TrelloComponent } from './trello/trello.component';
+import { TcardComponent } from './trello/tcard/tcard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardsTableComponent,
     CardComponent,
-    PlayCardComponent
+    PlayCardComponent,
+    TrelloComponent,
+    TcardComponent
   ],
   imports: [
     BrowserModule,
