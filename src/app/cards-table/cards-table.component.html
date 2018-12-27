@@ -13,21 +13,26 @@
   </div>
 </div>
 <hr>
-<div class="dayTime" style="border: 1px solid grey; width: 50%;">
+
+<div class="dayTime" style="border: 1px solid rgb(170, 92, 20); width: 50%;">
     <div style="text-align: center;">
       <h4>*ngFor test</h4>
+      <h5>Обычное отображения масива</h5>
+      <app-play-card *ngFor="let car of simpleArray">car</app-play-card>
 
-      <!-- <button (click)="ngIfTest()" class="btn btn-primary">ngIf test</button> -->
-      <!-- <p *ngIf="ngIfElse; else successElse">True</p> -->
-      <app-card *ngFor="let card of arrayOfCards"></app-card>
-
-      <hr>
-      <h4>All cards in array now:</h4>
-      <ul>
-        <li></li>
-      </ul>
-
-
+      <h3>let item of arrayOfCards</h3>
+      <h3>[ngStyle] example</h3>
+      <div 
+        *ngFor="let item of arrayOfCards; let idx = index" id="card" (mouseenter)="cardHover($event)"
+        [ngStyle]="{backgroundColor: idx % 2 === 0 ? 'pink' : 'lightGreen', color: idx % 2 === 0 ? 'blue' : 'red' }"
+        
+        >
+        <h5 id="card-id">{{ item.id }}</h5>
+        <img id="card-img" src="{{ item.img }}">
+        <p>power: <b>{{ item.power }}</b></p>
+        <p>magic: <b [ngClass]="{'big-text': setTextBigLenght(item)}">{{ item.magic }}</b></p>
+      </div>
+      
     </div>
   </div>
   <hr>

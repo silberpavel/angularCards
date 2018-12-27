@@ -11,6 +11,20 @@ export class CardsTableComponent implements OnInit {
   CurrentDate = new Date();
   CurrentHour: number = this.CurrentDate.getHours();
 
+  arrayOfCards = [
+    {id: 'King', power: 88, magic: 33, img: "https://i.pinimg.com/originals/f9/6c/6e/f96c6ef6bfdad0fc074a4503fca9c40e.png"},
+    {id: 'Queen1', power: 79, magic: 48, img: "https://i.pinimg.com/originals/e4/45/9f/e4459f271b4408291f5a346134d8c8c7.png"},
+    {id: 'Queen2', power: 32, magic: 43, img: "https://i.pinimg.com/originals/e4/45/9f/e4459f271b4408291f5a346134d8c8c7.png"},
+    {id: 'Queen3', power: 33, magic: 100, img: "https://i.pinimg.com/originals/e4/45/9f/e4459f271b4408291f5a346134d8c8c7.png"},
+    {id: 'George', power: 55, magic: 12, img: "http://richardschneider.github.io/cardsJS/cards/10S.svg"}
+  ];
+
+  simpleArray = ['Audi', 'BMW', 'Opel'];
+
+  setTextBigLenght(item: string) {
+    return item.length > 4 ? true : false;
+  }
+
   whatIsOutsideNow() {
     switch (true) {
       case (this.CurrentHour >= 6 && this.CurrentHour <= 11):
@@ -32,11 +46,6 @@ export class CardsTableComponent implements OnInit {
     return this.ngIfElse = true;
   }
 
-  arrayOfCards:any = [
-    {id:'King', power: 88, magic: 33, img: "https://i.pinimg.com/originals/f9/6c/6e/f96c6ef6bfdad0fc074a4503fca9c40e.png",}, 
-    {id:'Queen', power: 79, magic: 48, img: "https://i.pinimg.com/originals/e4/45/9f/e4459f271b4408291f5a346134d8c8c7.png"}, 
-    {id:'George', power: 55, magic: 12, img: "http://richardschneider.github.io/cardsJS/cards/10S.svg"}
-  ];
 
   addNewCardToArray() {
 
