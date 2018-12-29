@@ -28,16 +28,16 @@ export class CardsTableComponent implements OnInit {
   whatIsOutsideNow() {
     switch (true) {
       case (this.CurrentHour >= 6 && this.CurrentHour <= 11):
-        return("Morning now");
+        return('Morning now');
         break;
       case (this.CurrentHour >= 12 && this.CurrentHour <= 17):
-        return("Midday now");
+        return('Midday now');
         break;
         case (this.CurrentHour >= 17 && this.CurrentHour <= 22):
-        return("Evening now");
+        return('Evening now');
         break;
       default:
-        return("Night now");
+        return('Night now');
     }
   }
 
